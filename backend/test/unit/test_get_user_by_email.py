@@ -17,7 +17,7 @@ def sut(email, dao_response):
 @pytest.mark.parametrize('email, dao_response, expected',
     [
         ('example@email.test', ['example@email.test'], 'example@email.test'),
-        ('example@email.test', ['example@email.test', 'example2@email.test'], 'example@email.test'),
+        ('example@email.test', ['example@email.test', 'example@email.test'], 'example@email.test'),
     ]
 )
 def test_get_user_by_email(sut, email, expected):
