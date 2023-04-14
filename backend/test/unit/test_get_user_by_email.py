@@ -18,6 +18,7 @@ def sut(email, dao_response):
     [
         ('example@email.test', ['example@email.test'], 'example@email.test'),
         ('example@email.test', ['example@email.test', 'example@email.test'], 'example@email.test'),
+        ('example@email.test', [], None),
     ]
 )
 def test_get_user_by_email(sut, email, expected):
