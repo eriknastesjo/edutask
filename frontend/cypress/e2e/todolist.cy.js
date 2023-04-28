@@ -17,7 +17,6 @@ describe('Todo list', () => {
           form: true,
           body: user
         }).then((response) => {
-          cy.log(JSON.stringify(response))
           uid = response.body._id.$oid
           name = user.firstName + ' ' + user.lastName
           email = user.email
@@ -64,6 +63,10 @@ describe('Todo list', () => {
     cy.contains('li', `${todo}`)
     .should('exist');
 
+  })
+
+  it('should contain a disabled Add button', () => {
+    cy.get('div.popup').find('input[type=submit]').should('be.disabled')
   })
 
 
