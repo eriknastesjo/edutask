@@ -14,6 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: List files in the root
+        run: ls
+
+      - name: Change directory to backend
+        run: cd ./backend
+
+      - name: List files in the backend
+        run: ls
+
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
