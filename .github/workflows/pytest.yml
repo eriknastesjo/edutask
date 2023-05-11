@@ -18,7 +18,7 @@ jobs:
         run: ls
 
       - name: Change directory to backend
-        run: cd ./backend
+        working-directory: ./backend
 
       - name: List files in the backend
         run: ls
